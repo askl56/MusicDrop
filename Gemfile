@@ -22,6 +22,7 @@ gem 'lastfm'
 gem 'rspotify'
 gem 'wikipedia-client'
 gem 'figaro'
+gem 'rockstar'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
