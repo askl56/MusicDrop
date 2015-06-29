@@ -17,6 +17,7 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'httparty'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
