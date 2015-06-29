@@ -7,14 +7,14 @@ RSpec.describe ArtistsController, :type => :controller do
 
   describe "GET index" do
     it "returns http success" do
-      get :index, artist: "50 Cent"
+      get :index
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET show" do
     it "returns http success" do
-      get :show, artist: "50 Cent"
+      get :show
       expect(response).to have_http_status(:success)
     end
   end
