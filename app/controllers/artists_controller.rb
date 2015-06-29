@@ -1,10 +1,8 @@
 class ArtistsController < ApplicationController
 
-  require 'rockstar'
-
   def index
-    if !params[:artist_name].empty?
-      @artists = Rockstar::Artist.search(params[:artist_name])
+    if !params[:artist].empty?
+      @artists = Rockstar::Artist.search(params[:artist])
     else
       redirect_to root_path
     end
@@ -12,5 +10,11 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Rockstar::Artist.find(params[:id])
+  end
+
+  private
+
+  def artist_params
+    params.require(:artist).permit(:name)
   end
 end
