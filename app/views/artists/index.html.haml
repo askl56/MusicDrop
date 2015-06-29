@@ -1,2 +1,7 @@
-%h1 Artists#index
-%p Find me in app/views/artists/index.html.haml
+%h1.page-header
+  Artists Matching #{params[:artist_name]}
+%ul
+  - @artists.each do |artist|
+    %li
+      = artist.name
+      | #{link_to "Show", artist_path(artist.id)}

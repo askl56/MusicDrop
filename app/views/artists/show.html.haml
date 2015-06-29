@@ -1,2 +1,10 @@
-%h1 Artists#show
-%p Find me in app/views/artists/show.html.haml
+%h1.page-header= @artist.name
+%h3
+  = @artist.albums(country: 'US').map { |album| album.tracks }.flatten.inject(0) { |sum, track| sum + track.duration_ms } / 1000 / 60 / 60
+  hours total
+- @artist.albums(country: 'US').each do |album|
+  %h3= album.name
+  %ul
+    - album.tracks.each do |track|
+      %li
+        = track.name
