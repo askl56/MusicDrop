@@ -20,6 +20,8 @@ gem 'simple_form'
 gem 'httparty'
 gem 'lastfm'
 gem 'rspotify'
+gem 'wikipedia-client'
+gem 'figaro'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
