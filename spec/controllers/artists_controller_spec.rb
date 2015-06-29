@@ -1,20 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe ArtistsController, :type => :controller do
-  before(:each) do
-    artist = Rockstar::Artist.new("50 Cent")
-  end
+RSpec.describe ArtistsController, type: :controller do
 
   describe "GET index" do
     it "returns http success" do
-      get :index
+      sign_in
+      get :index, artist: "50 Cent"
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "GET show" do
     it "returns http success" do
-      get :show
+      sign_in
+      get :show, artist: "50 Cent"
       expect(response).to have_http_status(:success)
     end
   end
