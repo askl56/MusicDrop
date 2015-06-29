@@ -85,6 +85,10 @@ GEM
       actionmailer (>= 3.2.6, < 5)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
@@ -95,6 +99,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.9)
     formatador (0.2.5)
     globalid (0.3.5)
@@ -128,11 +134,14 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.2)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -145,6 +154,11 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    jwt (1.5.1)
+    lastfm (1.26.0)
+      activesupport (>= 3.2.0)
+      httparty
+      xml-simple
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.0.0)
@@ -161,12 +175,26 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     nenv (0.2.0)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    oauth2 (1.0.0)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (~> 1.2)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
+    omniauth-oauth2 (1.3.1)
+      oauth2 (~> 1.0)
+      omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.18.2)
     pry (0.10.1)
@@ -218,6 +246,10 @@ GEM
       ffi (>= 0.5.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -239,6 +271,9 @@ GEM
       rspec-mocks (~> 3.3.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    rspotify (1.14.0)
+      omniauth-oauth2 (~> 1.1)
+      rest-client (~> 1.7)
     ruby_parser (3.7.0)
       sexp_processor (~> 4.1)
     rubyzip (1.1.7)
@@ -284,6 +319,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.1.3)
@@ -292,6 +330,7 @@ GEM
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     websocket (1.2.2)
+    xml-simple (1.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -307,6 +346,7 @@ DEPENDENCIES
   database_cleaner
   devise
   devise_invitable
+  erb2haml
   factory_girl_rails
   faker
   guard-bundler
@@ -317,6 +357,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  lastfm
   launchy
   pg
   puma
@@ -328,6 +369,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   rspec-rails
+  rspotify
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form

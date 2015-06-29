@@ -18,6 +18,8 @@ gem 'devise_invitable'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'httparty'
+gem 'lastfm'
+gem 'rspotify'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -37,6 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
   gem 'thin'
+  gem "erb2haml"
 end
 group :production do
   gem 'pg'
