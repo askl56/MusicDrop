@@ -1,13 +1,16 @@
 class ArtistsController < ApplicationController
+
+  require 'rockstar'
+
   def index
     if !params[:artist_name].empty?
-      @artists = RSpotify::Artist.search(params[:artist_name])
+      @artists = Rockstar::Artist.search(params[:artist_name])
     else
       redirect_to root_path
     end
   end
 
   def show
-    @artist = RSpotify::Artist.find(params[:id])
+    @artist = Rockstar::Artist.find(params[:id])
   end
 end
