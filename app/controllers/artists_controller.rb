@@ -1,7 +1,8 @@
- class ArtistsController < ApplicationController
+class ArtistsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    redirect_to artist_path(id: params[:id])
   end
 
   def show

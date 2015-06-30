@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :artists, only: :show
+  resources :artists, only: [:show,:index]
 
 
   root to: 'visitors#index'
