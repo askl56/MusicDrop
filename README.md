@@ -1,7 +1,7 @@
 Musicdrop
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 
 Ruby on Rails
 -------------
@@ -13,9 +13,11 @@ This application requires:
 
 Getting Started
 ---------------
+This is an app to search for any artist using Last.fm. Simply sign up and then use the search box. Easy as that.
 
 Documentation and Support
 -------------------------
+Any problems email at amscott@openmailbox.org
 
 Issues
 -------------
