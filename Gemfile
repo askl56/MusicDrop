@@ -20,6 +20,8 @@ gem 'simple_form'
 gem 'httparty'
 gem 'figaro'
 gem 'rockstar'
+gem 'kaminari'
+gem 'regressor'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
