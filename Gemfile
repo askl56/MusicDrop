@@ -23,6 +23,7 @@ gem 'figaro'
 gem 'rockstar'
 gem 'kaminari'
 gem 'regressor'
+gem 'rubocop'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
