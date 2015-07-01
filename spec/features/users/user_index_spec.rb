@@ -6,7 +6,6 @@ Warden.test_mode!
 #   I want to see a list of users
 #   So I can see who has registered
 feature 'User index page', :devise do
-
   after(:each) do
     Warden.test_reset!
   end
@@ -19,7 +18,6 @@ feature 'User index page', :devise do
     user = FactoryGirl.create(:user)
     login_as(user, scope: :user)
     visit users_path
-    expect(page).to have_content "user"
+    expect(page).to have_content 'user'
   end
-
 end
